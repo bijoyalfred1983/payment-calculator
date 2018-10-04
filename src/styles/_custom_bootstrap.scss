@@ -1,0 +1,164 @@
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+@mixin gradient-vertical($start-color:#FAFBFF, $end-color: #333, $start-percent: 100%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  box-shadow: 0px 1px 1px 0px #535353;
+  padding: 25px;
+  cursor: pointer;
+  //font-size: 20px;
+  //@include border-radius(20px);  
+  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+    @mixin border-radius($radius: 1px) {
+      -webkit-border-radius: $radius;
+         -moz-border-radius: $radius;
+              border-radius: $radius;
+    }
+
+    $enable-rounded: true!default;
+   
+    
+/*@mixin gradient-vertical($start-color: rgb(233, 220, 220), $end-color: #333, $start-percent: 5%, $end-percent: 100%) {
+   background-image: -webkit-linear-gradient(top, #FAFBFF, #B0B0AE);
+   background-image: -moz-linear-gradient(top, #FAFBFF, #B0B0AE);
+   background-image: -ms-linear-gradient(top, #FAFBFF, #B0B0AE);
+   background-image: -o-linear-gradient(top, #FAFBFF, #B0B0AE);
+   background-image: linear-gradient(to bottom, #FAFBFF, #B0B0AE);
+   background-repeat: repeat-x;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   color: #616161;
+   font-family: Open Sans;
+   font-size: 20px;
+   padding: 25px;
+   box-shadow: inset 0px 1px 6px 0px #000000;
+   -webkit-box-shadow: inset 0px 1px 6px 0px #000000;
+   -moz-box-shadow: inset 0px 1px 6px 0px #000000;
+   border: solid #000000 2px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}*/
+$hr-border-color:rgb(41, 39, 39);
+$border-width:1px;
+$hr-border-width:$border-width;
+
+.card-deck > div{
+  margin-bottom: 30px;
+}
+
+.card {
+  box-shadow: 0px 1px 1px 1px #535353;
+}
+
+.label-font-xl {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+form input.error {
+  border-color: red;
+}
+
+.btn-xl {
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+}
+.custom-btn {
+  @include gradient-vertical(#d3d3d3,#B9B9B9,0%,100%);
+  border-style: solid;
+  border: #333;
+}
+
+.custom-btn-header {
+  @include gradient-vertical(#efefef,#dadada,0%,100%);
+  border-style: solid;
+  border: #aeaeae;
+  
+}
+
+.finance-title-center {
+  text-align: center;
+}
+
+.header-container {
+  background: #d7d7d7;
+  padding: 20px 0;
+  display:block;
+  height:100px;
+  box-shadow: 0 3px 3px #c1c1c2;
+  border-bottom: 1px solid rgb(160, 147, 147);
+  //margin-bottom: 25px;
+}
+.arrange-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);}
+
+  html, body {
+    height: 100%!important;
+  }
+
+  .container-height {
+    height: 86%!important;
+
+  }
+
+  input[type=text]{
+    box-shadow: 0 0 5px #d3d3d3;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #B9B9B9;
+  }
+
+  /*.form-border{
+    border: #333 solid 1px;
+  }*/
+
+  .amount-label-font{
+    font-size: 16px;
+  }
+  .summary-font{
+    font-size: 14px;
+  }
+
+  /*.fade-appear,
+  .fade-enter {
+      opacity: 0;
+      z-index: 1;
+  }
+  .fade-appear-active,
+  .fade-enter.fade-enter-active {
+      opacity: 1;
+      transition: opacity 300ms linear 150ms;
+  }
+  
+  .fade-exit {
+      opacity: 1;
+  }
+  
+  .fade-exit.fade-exit-active {
+      opacity: 0;
+      transition: opacity 150ms linear;
+  }*/
+  
+  
+  /*.page {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+  }*/
+
+  
